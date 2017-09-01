@@ -1,0 +1,54 @@
+input {
+    font-size: 1.15em;
+}
+#container {
+    width: 90%;
+    margin: 0 auto;
+}
+#playersColumn {
+    padding: 0;
+    margin: 0;
+}
+#playersColumn > .header {
+    background-color: #666;
+    color: #eee;
+    padding: 1%;
+    font-size: 1.6em;
+}
+#playersColumn > .content {
+    border: thin solid #ccc;
+    padding: 1%;
+}
+#playersList {
+    min-height: 100px;
+    margin-bottom: 3%;
+}
+#gameControl {
+    float: right;
+}
+#cardTable {
+    margin-top: 2%;
+    min-height: 200px;
+}
+#cardTable > .cardBox {
+    border: thin solid #bbb;
+    min-height: 150px;
+    width: 19%;
+    float: left;
+    margin-right: 1%;
+}
+#cardTable > .cardBox > .cardDiv {
+    border: thin dotted #eee;
+    padding: 4%;
+    font-size: 1.43em;
+    vertical-align: middle;
+}
+.playerBox {
+    border-bottom: thin dotted #ccc;
+    margin-top: 1%;
+    padding: 1%;
+}
+.clearDiv {
+    float: none;
+    clear: both;
+}
