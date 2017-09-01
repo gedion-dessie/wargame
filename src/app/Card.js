@@ -3,7 +3,7 @@
  */
 
 /**
- *
+ * A card object
  * @param rank
  * @param suit
  * @returns {{rank: *, suit: *, getValue: (function())}}

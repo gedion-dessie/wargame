@@ -8,7 +8,7 @@
  */
 const Deck = (function() {
   /**
-   * makeDeck
+   * create (numberOfRanks * numberOfSuits) of cards and populate the deck
    * @param ranks
    * @param suits
    * @returns {Array}
@@ -25,6 +25,7 @@ const Deck = (function() {
   };
 
   /**
+   * Shuffle a deck
    * @param deck
    */
   const shuffleDeck = (deck) => deck.sort(() => Math.random() - 0.5);

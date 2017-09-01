@@ -3,6 +3,7 @@
  */
 
 /**
+ * A player object
  * @param name
  * @returns {{name: *, facedDownCards: Array, facedUpCards: Array, getNumberOfCards: (function())}}
  * @constructor

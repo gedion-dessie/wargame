@@ -22,6 +22,11 @@ window.onload = function() {
   const nextButton = document.getElementById('next');
   const cardTableDiv = document.getElementById('cardTable');
 
+  /**
+   * Creates a div that will be appended to playerList div
+   * @param player
+   * @returns {Element}
+   */
   const createPlayerDiv = (player) => {
     const name = player.name;
     const playerDiv = document.createElement('div');
@@ -36,9 +41,15 @@ window.onload = function() {
     playerNameDiv.appendChild(playerNameContent);
     playerDiv.appendChild(playerNameDiv);
     playerDiv.appendChild(playerStats);
+
     return playerDiv;
   };
 
+  /**
+   * Creates a card box of a player on the table
+   * @param player
+   * @returns {Element}
+   */
   const createCardBoxDiv = (player) => {
     const cardBoxDiv = document.createElement('div');
     const playerNameDiv = document.createElement('div');
@@ -57,6 +68,10 @@ window.onload = function() {
     return cardBoxDiv;
   };
 
+  /**
+   * Handle when a user clicks a card (the same us turning the face up)
+   * @param event
+   */
   const handleCardDivClick = (event) => {
     console.log(numberOfCardsInPlay);
     const cardDiv = event.target;
@@ -86,6 +101,9 @@ window.onload = function() {
     }
   };
 
+  /**
+   * Handles adding a player to the list. This game allows 2 - 5 players to play
+   */
   const handleAddPlayer = () => {
     const playerName = playerNameInput.value;
     if (playerName.length > 0) {
@@ -110,6 +128,9 @@ window.onload = function() {
     }
   };
 
+  /**
+   * Handle the 'Play' button click. This marks the start of the game
+   */
   const handlePlayGame = () => {
     addPlayerButton.classList.remove('btn-primary');
     addPlayerButton.classList.add('btn-secondary');
@@ -139,6 +160,9 @@ window.onload = function() {
     }
   };
 
+  /**
+   * Handle 'Next' button click and determine who won this battle
+   */
   const handleBattle = () => {
     let battleResult;
     if (isThereWar) {

@@ -5,7 +5,7 @@
 let numberOfCardsInPlay = 0;
 
 /**
- * Deal cards to players evenly
+ * Evenly deal cards to players
  * @param deck
  * @param players
  */
@@ -20,7 +20,8 @@ const dealCards = (deck, players) => {
 };
 
 /**
- * Battle between all (two or more) players
+ * Battle between all (two or more) players. Player with higher card will win.
+ * If all of the participating players have equal value cards, then there will be a war!
  * @param players
  * @param cardsOnTableParam
  */
@@ -67,7 +68,6 @@ const battle = (players, cardsOnTable) => {
       cardsOnTable.push(player.facedUpCards.pop());
     });
     // There is a war!
-    //battle(playersInBattle, cardsOnTable);
     thereIsWar = true;
   }
   return {
